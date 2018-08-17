@@ -1,0 +1,5 @@
+# Ignore OSX .DS_Store
+.DS_Store
+
+# Ignore installed npm related files
+node_modules
