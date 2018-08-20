@@ -4,7 +4,7 @@ const moment = require('moment');
 
 async function intro() {
   let dayOfWeek = moment().format("dddd");
-  let message = `<!subteam^S0LKVNKDF|engineers>, Happy ${dayOfWeek}! Here is the standup order for today:`;
+  let message = `${process.env.TAGGED_USER}, Happy ${dayOfWeek}! Here is the standup order for today:`;
   return message;
 }
 
