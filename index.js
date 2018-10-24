@@ -25,6 +25,18 @@ async function postToSlack() {
       {
         "text": await teamList(),
         "color": await randomColor(),
+        "fields": [
+          {
+            "title": "Teams:",
+            "value": "1. What are we currently focused on? \n2. Are we on track for our deadline? \n3. Is there anything that others can do to help us?",
+            "short": false
+          },
+          {
+            "title": "Bug owners:",
+            "value": "1. What is the expected resolution? \n2. When do I think I can complete this? \n3. Is there anything that others can do to help me?",
+            "short": false
+          }
+        ],
         "footer": `Join Standup Now :alarm_clock: ${process.env.MEETING_URL}`
       }
     ]
